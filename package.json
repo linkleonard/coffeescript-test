@@ -1,0 +1,22 @@
+{
+  "name": "coffeescript-test",
+  "version": "0.0.0",
+  "description": "Experimenting with coffeescript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/linkleonard/coffeescript-test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/linkleonard/coffeescript-test/issues"
+  },
+  "homepage": "https://github.com/linkleonard/coffeescript-test",
+  "dependencies": {
+    "coffee-script": "~1.10.0"
+  }
+}
