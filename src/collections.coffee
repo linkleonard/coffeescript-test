@@ -21,7 +21,72 @@ kids =
 
 # JS keywords as properties are automatically wrapped with quotes
 # Equivalent to $('.account').attr({'class': 'active'})
-$('.account').attr class: 'active'
+# Does not run in node.
+# $('.account').attr class: 'active'
 
 # Equivalent to log(object['class'])
-log object.class
+# Does not run in node.
+# log object.class
+
+
+# Iterating over a collection is written similar to a list comprehension.
+
+# Eat lunch
+# for food in ...:
+#    eat(food)
+eat = (dish) ->
+    console.log dish, "was yummy!"
+    null
+
+eat food for food in ['toast', 'cheese', 'wine']
+
+# Fine five course dining
+courses = ['greens', 'caviar', 'truffles', 'roast', 'cake']
+
+# Equivalent to pseudocode:
+# for (dish, i) in courses:
+#   menu(i + 1, dish)
+
+menu = (num, dish) ->
+    console.log "#{num}: #{dish}"
+    null
+
+menu i + 1, dish for dish, i in courses
+
+# Iteration with conditional
+# Health conscious meal
+foods = ['broccoli', 'spinach', 'chocolate']
+
+# Pseudocode:
+# for food in foods:
+#   if food isnt chocolate:
+#     eat(food)
+eat food for food in foods when food isnt 'chocolate'
+
+
+# Writing list comprehensions
+
+countdown = (num for num in [10..1])
+
+# Remember to explicitly return null if the function is only supposed to
+# perform an action without returning anything.
+loudCountdown = ->
+    console.log num for num in [10..1]
+    null
+
+# Low level loops
+# Two ways to write while loops
+if this.studyingEconomics
+    buy() while supply > demand
+    sell until supply > demand
+
+# Building list with while loop.
+
+# Note that indentation leading up to the opening quote is stripped from
+# following lines.
+num = 6
+lyrics = while num -= 1
+    "#{num} little monkeys, jumping on the bed.
+      One fell out and bumped his head."
+
+console.log lyrics
