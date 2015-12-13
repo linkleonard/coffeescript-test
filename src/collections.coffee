@@ -90,3 +90,25 @@ lyrics = while num -= 1
       One fell out and bumped his head."
 
 console.log lyrics
+
+
+# Anonymous function inside a loop
+fs = require 'fs'
+files = ['lib/collections.js', 'lib/functions.js']
+for filename in files
+    do (filename) ->
+        fs.readFile filename, (err, contents) ->
+            console.log filename, contents.length
+
+
+#
+numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+# a..b is equivalent to [a, b]
+start = numbers[0..2]
+middle = numbers[3...-2]
+end = numbers[-2..]
+copy = numbers[..]
+
+
+numbers[3..5] = [5..3]
+console.log numbers

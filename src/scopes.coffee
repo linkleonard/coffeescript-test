@@ -11,3 +11,6 @@ changeNumbers = ->
 inner = changeNumbers()
 
 console.log '(Module) Inner:', inner, 'Outer:', outer
+
+
+six = (one = 1) + (two = 2) + (three = 3)
